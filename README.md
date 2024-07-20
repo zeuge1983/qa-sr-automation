@@ -112,7 +112,7 @@ Test execution can be triggered from there. Here is the report: ![Report](images
 To be able to use CI/CD test excetuion, the project has to be configured:
 
 1. Create GitHub Actions Workflow: 
-   create a .github/workflows directory in your project root. Inside this directory, create a workflow file (e.g., ci.yml). Please have a look at [ci.yml] (.github/workflows/cy.yml)
+   create a .github/workflows directory in your project root. Inside this directory, create a workflow file (e.g., ci.yml). Please have a look at [ci.yml] (https://github.com/zeuge1983/qa-sr-automation/blob/main/.github/workflows/ci.yml)
 
     - Trigger Events:
         The workflow runs on pushes and pull requests to the main branch.

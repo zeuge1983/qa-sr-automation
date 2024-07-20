@@ -101,12 +101,3 @@ to the scripts object in your package.json file and use the name e2e:chrome to i
 ```bash
 npm run e2e:chrome
 ```
-
-# Best practisies
-Of course, there are many improvements that can be made to this solution when viewed as a potential product. Here are some of them:
- * using Application Actions instead of Page Objects
- * choosing best-suited locators
- * using closures and aliases
- * cleaning up the state before running the tests
- * programmatically log into your application, and take control of your application's state
- * introfucing data-* attributes to the project to provide context to the selectors and isolate them from CSS or JS changes

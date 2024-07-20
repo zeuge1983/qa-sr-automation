@@ -13,18 +13,32 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '20'
 
       - name: Clear npm cache
         run: npm cache clean --force
 
+      - name: Remove node_modules and package-lock.json
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+
       - name: Install dependencies
         run: npm install
+
+      - name: Print Node.js Version
+        run: node -v
+
+      - name: Print npm Version
+        run: npm -v
+
+      - name: List Installed Packages
+        run: npm list --depth=0
 
       - name: Verify Cypress installation
         run: npx cypress verify
 
       - name: Run Cypress tests
-        run: npx cypress run
+        run: npx cypress run --verbose
         env:
           CI: true

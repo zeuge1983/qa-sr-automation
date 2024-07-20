@@ -103,22 +103,24 @@ to the scripts object in your package.json file and use the name e2e:chrome to i
 npm run e2e:chrome
 ```
 
-It is also possible to trigger test execution via CI github. Currently it's done by using Github Actions in my own [repsitory](https://github.com/zeuge1983/qa-sr-automation/actions/runs/10019872501).
-Test execution can be triggered from there. Here is the ![Report](images/report.jpg)
+# GitHub Actions
 
-To be able to use CI/CD test excetuion, the project has to be prepared:
+It is also possible to trigger the test execution via CI github. Currently it's done by using Github Actions in my own [Repsitory](https://github.com/zeuge1983/qa-sr-automation/actions/runs/10019872501).
+
+Test execution can be triggered from there. Here is the report: ![Report](images/report.jpg)
+
+To be able to use CI/CD test excetuion, the project has to be configured:
+
 1. Create GitHub Actions Workflow: 
-   create a .github/workflows directory in your project root. Inside this directory, create a workflow file (e.g., ci.yml). Please have a look at ci.yml file in this project.
+   create a .github/workflows directory in your project root. Inside this directory, create a workflow file (e.g., ci.yml). Please have a look at [ci.yml] (.github/workflows/cy.yml)
 
-   Explanation of Workflow File
-
-    Trigger Events:
+    - Trigger Events:
         The workflow runs on pushes and pull requests to the main branch.
 
-    Jobs:
+    - Jobs:
         Define a job named cypress-run that runs on ubuntu-latest.
 
-    Steps:
+    - Steps:
         Checkout Code: Use the actions/checkout@v3 action to check out your repository's code.
         Set Up Node.js: Use the actions/setup-node@v3 action to set up a Node.js environment. The node-version parameter specifies the Node.js version.
         Install Dependencies: Run npm install to install your project's dependencies.
@@ -126,6 +128,7 @@ To be able to use CI/CD test excetuion, the project has to be prepared:
 
 2. Manually Triggering the Workflow
 
-    Navigate to the Actions Tab: Go to the Actions tab of your GitHub repository.
-    Select the Workflow: Find the workflow named "Manual Cypress Test Run" in the list of workflows.
-    Run the Workflow: Click the "Run workflow" button. You can choose which branch to run the workflow on if your configuration supports multiple branches.
+    - Navigate to the Actions Tab: 
+        Go to the [Actions] (https://github.com/zeuge1983/qa-sr-automation/actions)
+    - Select the Workflow: Find the workflow named "Manual Cypress Test Run" in the list of workflows.
+    - Run the Workflow: Click the "Run workflow" button. You can choose which branch to run the workflow on if your configuration supports multiple branches.

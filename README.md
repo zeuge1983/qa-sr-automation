@@ -16,6 +16,7 @@ Test task implemented by using **Cypress framework** and **TypeScript**
 To install Cypress and TypeScriptexecute following commands:
 
 ```bash
+npm install
 npm install cypress --save-dev
 npm install --save-dev typescript
 ```

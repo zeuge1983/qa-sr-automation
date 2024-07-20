@@ -104,8 +104,7 @@ npm run e2e:chrome
 ```
 
 It is also possible to trigger test execution via CI github. Currently it's done by using Github Actions in my own [repsitory](https://github.com/zeuge1983/qa-sr-automation/actions/runs/10019872501).
-Test execution can be triggered from there. Here is the report:
-![alt text](images/report.png)
+Test execution can be triggered from there. Here is the ![Report](images/report.jpg)
 
 To be able to use CI/CD test excetuion, the project has to be prepared:
 1. Create GitHub Actions Workflow: 

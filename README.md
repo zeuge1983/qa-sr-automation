@@ -112,7 +112,8 @@ Test execution can be triggered from there. Here is the report: ![Report](images
 To be able to use CI/CD test excetuion, the project has to be configured:
 
 1. Create GitHub Actions Workflow: 
-   create a .github/workflows directory in your project root. Inside this directory, create a workflow file (e.g., ci.yml). Please have a look at [ci.yml] (https://github.com/zeuge1983/qa-sr-automation/blob/main/.github/workflows/ci.yml)
+   create a .github/workflows directory in your project root. Inside this directory, create a workflow file (e.g., ci.yml). Please have a look at 
+   [ci.yml](https://github.com/zeuge1983/qa-sr-automation/blob/main/.github/workflows/ci.yml)
 
     - Trigger Events:
         The workflow runs on pushes and pull requests to the main branch.
@@ -129,6 +130,6 @@ To be able to use CI/CD test excetuion, the project has to be configured:
 2. Manually Triggering the Workflow
 
     - Navigate to the Actions Tab: 
-        Go to the [Actions] (https://github.com/zeuge1983/qa-sr-automation/actions)
+        Go to the [Actions](https://github.com/zeuge1983/qa-sr-automation/actions)
     - Select the Workflow: Find the workflow named "Manual Cypress Test Run" in the list of workflows.
     - Run the Workflow: Click the "Run workflow" button. You can choose which branch to run the workflow on if your configuration supports multiple branches.

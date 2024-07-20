@@ -39,6 +39,6 @@ jobs:
         run: npx cypress verify
 
       - name: Run Cypress tests
-        run: npx cypress run --verbose
+        run: npx cypress run
         env:
           CI: true

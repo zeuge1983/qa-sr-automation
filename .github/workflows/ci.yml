@@ -1,12 +1,7 @@
-name: CI
+name: Manual Cypress Test Run
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   cypress-run:

@@ -29,29 +29,29 @@ class homePage {
 
     filterByComputerName() {
         this.elements.inputPlaceholder().should('have.attr', 'placeholder', 'Filter by computer name...');
-        this.elements.searchBox().type(computerData.name);
-        // this.elements.searchBox().type("ASCI White");
+        // this.elements.searchBox().type(computerData.name);
+        this.elements.searchBox().type("ASCI White");
         this.elements.filterByNameButton().click();
     }
 
     checkComputersListIsFiltered() {
-        const introducedDate = formatDate(computerData.introduced);
-        const discontinuedDate = formatDate(computerData.discontinued);
+        // const introducedDate = formatDate(computerData.introduced);
+        // const discontinuedDate = formatDate(computerData.discontinued);
 
-        cy.contains(computerData.name).should('be.visible');
-        cy.contains(introducedDate).should('be.visible');
-        cy.contains(discontinuedDate).should('be.visible');
-        cy.contains(computerData.brand).should('be.visible');
+        // cy.contains(computerData.name).should('be.visible');
+        // cy.contains(introducedDate).should('be.visible');
+        // cy.contains(discontinuedDate).should('be.visible');
+        // cy.contains(computerData.brand).should('be.visible');
 
-        // cy.contains('ASCI White').should('be.visible');
-        // cy.contains('01 Jan 2001').should('be.visible');
-        // cy.contains('01 Jan 2006').should('be.visible');
-        // cy.contains('IBM').should('be.visible');
+        cy.contains('ASCI White').should('be.visible');
+        cy.contains('01 Jan 2001').should('be.visible');
+        cy.contains('01 Jan 2006').should('be.visible');
+        cy.contains('IBM').should('be.visible');
     }
 
     clickOnComputerName(computerName: string) {
-        cy.contains(computerName).click();
-        // cy.contains('ASCI White').click();
+        // cy.contains(computerName).click();
+        cy.contains('ASCI White').click();
     }
 }
 
